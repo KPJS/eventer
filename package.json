@@ -1,0 +1,32 @@
+{
+  "name": "eventer",
+  "version": "0.0.1",
+  "description": "drinking app",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KPJS/eventer.git"
+  },
+  "keywords": [
+    "beer",
+    "wine",
+    "event"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KPJS/eventer/issues"
+  },
+  "homepage": "https://eventer.azurewebsites.net",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "tsc": "^1.20150623.0"
+  }
+}
