@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test",
-    "start": "node app.js"
+    "test": "mocha server/test",
+    "start": "node server/app.js"
   },
   "repository": {
     "type": "git",
