@@ -28,5 +28,8 @@
   "devDependencies": {
     "mocha": "^3.4.2",
     "tsc": "^1.20150623.0"
+  },
+  "engines": {
+    "node": "8.1.0"
   }
 }
