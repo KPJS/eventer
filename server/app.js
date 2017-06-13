@@ -1,9 +1,26 @@
-var http = require("http");
+var restify = require("restify");
 
-http.createServer(function (request, response) {
-   response.writeHead(200, {'Content-Type': 'text/plain'});
-   
-   response.end('Hello World New\n');
-}).listen(process.env.PORT || 1234);
+var server = restify.createServer();
+server.get('/rest', function(req, res, next){
+	res.send('hello rest');
+	next();
+});
 
-console.log('Server running');
+// server.get('/', restify.serveStatic({
+// 	directory: './app',
+// 	file: 'index.html'
+// }));
+
+server.get(/.*/, restify.serveStatic({
+	directory: './app',
+	default: 'index.html'
+}))
+
+// server.get(/\/css\/?.*/, restify.serveStatic({
+// 	directory: './app/css',
+// 	default: 'default.css'
+// }));
+
+server.listen(process.env.PORT || 1234, function() {
+  console.log('%s listening at %s', server.name, server.url);
+});

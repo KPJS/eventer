@@ -24,7 +24,9 @@
     "url": "https://github.com/KPJS/eventer/issues"
   },
   "homepage": "https://eventer.azurewebsites.net",
-  "dependencies": {},
+  "dependencies": {
+    "restify": "^4.3.0"
+  },
   "devDependencies": {
     "mocha": "^3.4.2",
     "tsc": "^1.20150623.0"
