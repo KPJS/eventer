@@ -14,6 +14,5 @@ server.get(/\/?.*/, restify.serveStatic({
 }))
 
 server.listen(process.env.PORT || 1234, function() {
-  console.log(constants.applicationRoot);
   console.log('%s listening at %s', server.name, server.url);
 });
