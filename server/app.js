@@ -13,7 +13,7 @@ server.get('/rest', function(req, res, next){
 
 
 server.get('.*', restify.serveStatic({
-	directory: './app',
+	directory: '.\\app',
 	default: 'index.html'
 }))
 
