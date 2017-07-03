@@ -11,8 +11,8 @@ server.get('/rest', function(req, res, next){
 // 	file: 'index.html'
 // }));
 
-server.get('.*', restify.serveStatic({
-	directory: __dirname + 'app',
+server.get(/\/?.*/, restify.serveStatic({
+	directory: __dirname + '/../app/',
 	default: 'index.html'
 }))
 
@@ -24,5 +24,6 @@ server.get('.*', restify.serveStatic({
 
 
 server.listen(process.env.PORT || 1234, function() {
-  console.log('%s listening at %s', server.name, server.url);
+  console.log('%s tomas listening at %s', server.name, server.url);
+  console.log(__dirname)
 });
