@@ -11,6 +11,7 @@ server.get('/rest', function(req, res, next){
 // 	file: 'index.html'
 // }));
 
+
 server.get('.*', restify.serveStatic({
 	directory: '.\\app',
 	default: 'index.html'
