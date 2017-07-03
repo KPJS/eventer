@@ -12,7 +12,7 @@ server.get('/rest', function(req, res, next){
 // }));
 
 server.get('.*', restify.serveStatic({
-	directory: __dirname + '/app',
+	directory: __dirname + 'app',
 	default: 'index.html'
 }))
 
