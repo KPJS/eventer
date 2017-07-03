@@ -1,4 +1,6 @@
-var restify = require("restify");
+var restify = require('restify');
+var path = require('path');
+var constants = require('./constants')
 
 var server = restify.createServer();
 server.get('/rest', function(req, res, next){
@@ -6,24 +8,12 @@ server.get('/rest', function(req, res, next){
 	next();
 });
 
-// server.get('/', restify.serveStatic({
-// 	directory: './app',
-// 	file: 'index.html'
-// }));
-
 server.get(/\/?.*/, restify.serveStatic({
-	directory: __dirname + '/../app/',
+	directory: path.join(constants.applicationRoot, 'app'),
 	default: 'index.html'
 }))
 
-// server.get(/\/css\/?.*/, restify.serveStatic({
-// 	directory: './app/css',
-// 	default: 'default.css'
-// }));
-
-
-
 server.listen(process.env.PORT || 1234, function() {
-  console.log('%s tomas listening at %s', server.name, server.url);
-  console.log(__dirname)
+  console.log(constants.applicationRoot);
+  console.log('%s listening at %s', server.name, server.url);
 });
