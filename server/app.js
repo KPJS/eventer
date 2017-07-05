@@ -8,7 +8,7 @@ server.get('/rest', function(req, res, next){
 	next();
 });
 
-server.get(/\/?.*/, restify.serveStatic({
+server.get(/\/?.*/, restify.plugins.serveStatic({
 	directory: path.join(constants.applicationRoot, 'app'),
 	default: 'index.html'
 }))
